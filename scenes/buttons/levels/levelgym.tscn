@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://cq3iupkc15h7"]
+
+[ext_resource type="Texture2D" uid="uid://q15s5ttu5lds" path="res://assets/levelselect/gym.png" id="1_kwo7b"]
+
+[node name="Button" type="Button" unique_id=1914654251]
+offset_right = 243.0
+offset_bottom = 243.0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=471119119]
+position = Vector2(123.5, 123.5)
+scale = Vector2(0.73511904, 0.73511904)
+texture = ExtResource("1_kwo7b")

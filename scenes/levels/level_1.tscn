@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cxw2j2crr63oi"]
+
+[ext_resource type="PackedScene" uid="uid://b8grj3hlb0vm8" path="res://scenes/timer.tscn" id="1_ksju7"]
+
+[node name="Node2D" type="Node2D" unique_id=807636056]
+
+[node name="AnimatedSprite2D" parent="." unique_id=1188562089 instance=ExtResource("1_ksju7")]
+position = Vector2(579, 326)
+frame = 4
+frame_progress = 0.0

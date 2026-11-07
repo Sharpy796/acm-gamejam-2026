@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://dbxusvms6rihc"]
+
+[ext_resource type="PackedScene" uid="uid://by5mlpav7h3yo" path="res://scenes/buttons/levels/levelwork.tscn" id="1_nqy8e"]
+[ext_resource type="PackedScene" uid="uid://dlaawnlm3vl02" path="res://scenes/buttons/levels/levelart.tscn" id="2_6rap8"]
+[ext_resource type="PackedScene" uid="uid://bjl1ahwmsumnd" path="res://scenes/buttons/levels/levelfood.tscn" id="3_aaiik"]
+[ext_resource type="PackedScene" uid="uid://cq3iupkc15h7" path="res://scenes/buttons/levels/levelgym.tscn" id="4_nqdjo"]
+[ext_resource type="PackedScene" uid="uid://knnikfm7k7s0" path="res://scenes/buttons/backbutton.tscn" id="5_6rap8"]
+[ext_resource type="PackedScene" uid="uid://cvk0f2uxoh6cc" path="res://scenes/buttons/levels/level1.tscn" id="6_aaiik"]
+
+[node name="Node2D" type="Node2D" unique_id=2137464456]
+
+[node name="ButtonWork" parent="." unique_id=1554690102 instance=ExtResource("1_nqy8e")]
+offset_left = 523.0
+offset_top = 70.0
+offset_right = 766.0
+offset_bottom = 313.0
+
+[node name="ButtonArt" parent="." unique_id=390207926 instance=ExtResource("2_6rap8")]
+offset_left = 845.0
+offset_top = 63.0
+offset_right = 1088.0
+offset_bottom = 306.0
+
+[node name="ButtonFood" parent="." unique_id=575125477 instance=ExtResource("3_aaiik")]
+offset_left = 858.0
+offset_top = 342.0
+offset_right = 1101.0
+offset_bottom = 585.0
+
+[node name="ButtonGym" parent="." unique_id=1802798906 instance=ExtResource("4_nqdjo")]
+offset_left = 518.0
+offset_top = 342.0
+offset_right = 761.0
+offset_bottom = 585.0
+
+[node name="ButtonBack" parent="." unique_id=1924945515 instance=ExtResource("5_6rap8")]
+offset_left = 41.0
+offset_top = 488.0
+offset_right = 175.0
+offset_bottom = 622.0
+
+[node name="ButtonLevel1" parent="." unique_id=662312430 instance=ExtResource("6_aaiik")]
+offset_left = 226.0
+offset_top = 210.0
+offset_right = 469.0
+offset_bottom = 453.0

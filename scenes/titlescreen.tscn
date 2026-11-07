@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://dqc5i27ipxsm7"]
+
+[ext_resource type="Texture2D" uid="uid://dh66u328h5eki" path="res://assets/titleplaceholder/small.png" id="1_6d6rd"]
+[ext_resource type="PackedScene" uid="uid://bu5iqi2ge62c8" path="res://scenes/buttons/menu/menustart.tscn" id="2_3jj3l"]
+[ext_resource type="PackedScene" uid="uid://bhyhesls3fi7w" path="res://scenes/buttons/menu/menucredits.tscn" id="3_vhbaf"]
+[ext_resource type="PackedScene" uid="uid://3vb0ipgmucuv" path="res://scenes/buttons/menu/menuextras.tscn" id="4_v6ms7"]
+[ext_resource type="PackedScene" uid="uid://p1n3168agewm" path="res://scenes/buttons/menu/menuquit.tscn" id="5_rpvs4"]
+
+[node name="Node2D" type="Node2D" unique_id=1129657453]
+metadata/_edit_vertical_guides_ = [574.0, 1073.0]
+
+[node name="Title" type="Sprite2D" parent="." unique_id=43124533]
+position = Vector2(826.99994, 217)
+scale = Vector2(1.2651515, 1.2651515)
+texture = ExtResource("1_6d6rd")
+
+[node name="StartButton" parent="." unique_id=232167011 instance=ExtResource("2_3jj3l")]
+offset_left = 666.0
+offset_top = 420.0
+offset_right = 810.0
+offset_bottom = 515.0
+
+[node name="StartButton2" parent="." unique_id=1387790787 instance=ExtResource("3_vhbaf")]
+offset_left = 667.0
+offset_top = 526.0
+offset_right = 811.0
+offset_bottom = 621.0
+
+[node name="StartButton3" parent="." unique_id=296104421 instance=ExtResource("4_v6ms7")]
+offset_left = 833.0
+offset_top = 419.0
+offset_right = 977.0
+offset_bottom = 514.0
+
+[node name="StartButton4" parent="." unique_id=18565419 instance=ExtResource("5_rpvs4")]
+offset_left = 834.0
+offset_top = 526.0
+offset_right = 978.0
+offset_bottom = 621.0

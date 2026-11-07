@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://3vb0ipgmucuv"]
+
+[ext_resource type="Texture2D" uid="uid://rqqqrdmuorq0" path="res://assets/menubuttons/extras.png" id="1_mnu5o"]
+
+[sub_resource type="GDScript" id="GDScript_t7v6v"]
+
+[node name="StartButton" type="Button" unique_id=232167011]
+offset_right = 144.0
+offset_bottom = 95.0
+script = SubResource("GDScript_t7v6v")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1787507612]
+position = Vector2(72, 48.000015)
+scale = Vector2(0.13835037, 0.13835038)
+texture = ExtResource("1_mnu5o")

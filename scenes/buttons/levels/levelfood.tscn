@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://bjl1ahwmsumnd"]
+
+[ext_resource type="Texture2D" uid="uid://da8rki0s4aqd6" path="res://assets/levelselect/food.png" id="1_b2e6r"]
+
+[node name="Button" type="Button" unique_id=1914652641]
+offset_right = 243.0
+offset_bottom = 243.0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2113522395]
+position = Vector2(123.5, 123.5)
+scale = Vector2(0.73511904, 0.73511904)
+texture = ExtResource("1_b2e6r")

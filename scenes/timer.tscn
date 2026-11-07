@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://b8grj3hlb0vm8"]
+
+[ext_resource type="Texture2D" uid="uid://8cxuqdebcbrp" path="res://assets/timer/timer_0.png" id="1_uktcg"]
+[ext_resource type="Texture2D" uid="uid://c5pmepyfyr2mb" path="res://assets/timer/timer_1.png" id="2_qso1l"]
+[ext_resource type="Texture2D" uid="uid://1nxvrr64kik3" path="res://assets/timer/timer_2.png" id="3_y07ne"]
+[ext_resource type="Texture2D" uid="uid://baven6nwxj4ob" path="res://assets/timer/timer_3.png" id="4_dtxrw"]
+[ext_resource type="Texture2D" uid="uid://b06prbmqpprdn" path="res://assets/timer/timer_4.png" id="5_sa7gq"]
+[ext_resource type="Script" uid="uid://x8naejdu1sd8" path="res://scenes/timer.gd" id="6_qso1l"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lfxu0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_uktcg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_qso1l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_y07ne")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_dtxrw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_sa7gq")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" unique_id=1188562089]
+sprite_frames = SubResource("SpriteFrames_lfxu0")
+frame_progress = 0.2640756
+script = ExtResource("6_qso1l")
+
+[node name="Timer" type="Timer" parent="." unique_id=7976175]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

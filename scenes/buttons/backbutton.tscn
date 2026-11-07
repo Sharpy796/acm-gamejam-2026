@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://knnikfm7k7s0"]
+
+[ext_resource type="Texture2D" uid="uid://c26bchpbbj4v4" path="res://assets/levelselect/back.png" id="1_2ytj8"]
+[ext_resource type="Script" uid="uid://c4nabl72ad7to" path="res://scenes/buttons/back_to_menu.gd" id="2_twsgi"]
+
+[node name="Button" type="Button" unique_id=1924945515]
+offset_right = 134.0
+offset_bottom = 134.0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1505730928]
+position = Vector2(67, 67)
+scale = Vector2(0.39880955, 0.39880955)
+texture = ExtResource("1_2ytj8")
+script = ExtResource("2_twsgi")
+
+[connection signal="pressed" from="." to="Sprite2D" method="_on_button_pressed"]
