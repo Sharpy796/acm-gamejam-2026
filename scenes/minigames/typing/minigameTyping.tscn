@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://bc5h4og2dwb0l" path="res://assets/minigameTyping/letters/y2.png" id="11_ouc45"]
 [ext_resource type="Script" uid="uid://3cdk05d4gfi3" path="res://scenes/minigames/typing/letter_e.gd" id="13_xgubd"]
 [ext_resource type="Script" uid="uid://cejyagggianub" path="res://scenes/minigames/typing/letter_y.gd" id="16_ouc45"]
+[ext_resource type="PackedScene" uid="uid://d3w3jvbg0d7ev" path="res://scenes/gameover.tscn" id="21_5eq5o"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ucim2"]
 animations = [{
@@ -111,7 +112,7 @@ animations = [{
 [node name="Node2D" type="Node2D" unique_id=1871124528]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2137640195]
-position = Vector2(872, 372.00003)
+position = Vector2(789, 388)
 scale = Vector2(0.5222222, 0.5222222)
 sprite_frames = SubResource("SpriteFrames_ucim2")
 script = ExtResource("3_xgubd")
@@ -120,14 +121,14 @@ script = ExtResource("3_xgubd")
 
 [node name="M" type="AnimatedSprite2D" parent="AnimatedSprite2D" unique_id=628989544]
 modulate = Color(1, 1, 1, 0.4392157)
-position = Vector2(-1432.3405, -451.91498)
+position = Vector2(-1266.1642, -455.7447)
 scale = Vector2(0.5047389, 0.50473917)
 sprite_frames = SubResource("SpriteFrames_hjb8m")
 script = ExtResource("4_is7tm")
 
 [node name="O" type="AnimatedSprite2D" parent="AnimatedSprite2D" unique_id=1316046786]
 modulate = Color(1, 1, 1, 0.4392157)
-position = Vector2(-1161.245, -457.8221)
+position = Vector2(-995.0687, -461.65182)
 scale = Vector2(0.3939298, 0.3912969)
 sprite_frames = SubResource("SpriteFrames_lfxu0")
 frame_progress = 0.20138402
@@ -135,21 +136,21 @@ script = ExtResource("7_7pmfk")
 
 [node name="N" type="AnimatedSprite2D" parent="AnimatedSprite2D" unique_id=414578830]
 modulate = Color(1, 1, 1, 0.4392157)
-position = Vector2(-914.42456, -448.2687)
+position = Vector2(-748.2483, -452.09842)
 scale = Vector2(0.46033934, 0.4603396)
 sprite_frames = SubResource("SpriteFrames_r6c0r")
 script = ExtResource("10_87pr3")
 
 [node name="E" type="AnimatedSprite2D" parent="AnimatedSprite2D" unique_id=2102416011]
 modulate = Color(1, 1, 1, 0.4392157)
-position = Vector2(-692.0963, -463.56683)
+position = Vector2(-525.92004, -467.39655)
 scale = Vector2(0.37982842, 0.37982857)
 sprite_frames = SubResource("SpriteFrames_odlsx")
 script = ExtResource("13_xgubd")
 
 [node name="Y" type="AnimatedSprite2D" parent="AnimatedSprite2D" unique_id=701063032]
 modulate = Color(1, 1, 1, 0.4392157)
-position = Vector2(-527.41534, -465.48175)
+position = Vector2(-361.23907, -469.31146)
 scale = Vector2(0.34920505, 0.34920517)
 sprite_frames = SubResource("SpriteFrames_g2mn5")
 script = ExtResource("16_ouc45")
@@ -157,5 +158,9 @@ script = ExtResource("16_ouc45")
 [node name="timer" parent="." unique_id=1188562089 instance=ExtResource("1_vravi")]
 position = Vector2(579, 577)
 
+[node name="gameover" parent="." unique_id=1827543178 instance=ExtResource("21_5eq5o")]
+position = Vector2(576, 324)
+
 [connection signal="minigame_completed" from="AnimatedSprite2D" to="timer" method="_on_animated_sprite_2d_minigame_completed"]
 [connection signal="timeout" from="AnimatedSprite2D/Timer" to="AnimatedSprite2D" method="_on_timer_timeout"]
+[connection signal="game_over" from="timer" to="gameover" method="_on_timer_game_over"]

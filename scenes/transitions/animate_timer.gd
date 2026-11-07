@@ -1,5 +1,6 @@
 extends AnimatedSprite2D
 
+signal game_over
 @onready var timer: Timer = get_node("Timer")
 var countdown = 8
 
@@ -20,8 +21,8 @@ func _process(delta: float) -> void:
 func _on_timer_timeout() -> void:
 	countdown -= 1
 	if countdown < 0:
-		Globals.resetRun()
-		get_tree().change_scene_to_file("res://scenes/titlescreen.tscn")
+		game_over.emit()
+		timer.stop()
 	else:
 		frame = countdown
 

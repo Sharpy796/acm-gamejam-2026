@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://c1v42hf1w6m1y" path="res://assets/minigameDressUp/thoughtOveralls.png" id="11_rot8g"]
 [ext_resource type="Texture2D" uid="uid://crseu7xvipalm" path="res://assets/minigameDressUp/miniHelmet.png" id="12_g36te"]
 [ext_resource type="Texture2D" uid="uid://cses5xy1hkwp2" path="res://assets/minigameDressUp/miniOveralls.png" id="14_e26u1"]
+[ext_resource type="PackedScene" uid="uid://d3w3jvbg0d7ev" path="res://scenes/gameover.tscn" id="19_jeu1h"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_fgrfx"]
 animations = [{
@@ -91,9 +92,6 @@ sprite_frames = SubResource("SpriteFrames_lfxu0")
 position = Vector2(747.4379, -1013.39703)
 sprite_frames = SubResource("SpriteFrames_hjb8m")
 
-[node name="timer" parent="." unique_id=1188562089 instance=ExtResource("1_sefyb")]
-position = Vector2(579, 577)
-
 [node name="Outfit0" type="Sprite2D" parent="." unique_id=1157564875]
 position = Vector2(827.82404, 220.78767)
 scale = Vector2(0.2942874, 0.2942874)
@@ -136,6 +134,12 @@ offset_right = 119.37953
 offset_bottom = 166.48677
 metadata/_edit_use_anchors_ = true
 
+[node name="timer" parent="." unique_id=1188562089 instance=ExtResource("1_sefyb")]
+position = Vector2(579, 577)
+
+[node name="gameover" parent="." unique_id=1827543178 instance=ExtResource("19_jeu1h")]
+position = Vector2(576, 327)
+
 [connection signal="minigame_completed" from="AnimatedSprite2D" to="timer" method="_on_animated_sprite_2d_minigame_completed"]
 [connection signal="timeout" from="AnimatedSprite2D/Timer" to="AnimatedSprite2D" method="_on_timer_timeout"]
 [connection signal="pressed" from="Outfit0/ButtonOutfit0" to="AnimatedSprite2D" method="_on_button_outfit_0_pressed"]
@@ -144,3 +148,4 @@ metadata/_edit_use_anchors_ = true
 [connection signal="pressed" from="Outfit1/ButtonOutfit1" to="Outfit1" method="_on_button_outfit_1_pressed"]
 [connection signal="pressed" from="Outfit2/ButtonOutfit2" to="AnimatedSprite2D" method="_on_button_outfit_2_pressed"]
 [connection signal="pressed" from="Outfit2/ButtonOutfit2" to="Outfit2" method="_on_button_outfit_2_pressed"]
+[connection signal="game_over" from="timer" to="gameover" method="_on_timer_game_over"]

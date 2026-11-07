@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://d3w3jvbg0d7ev"]
+
+[ext_resource type="Texture2D" uid="uid://dk3pan51yy6t6" path="res://assets/gameover/fire1.png" id="1_kwbp2"]
+[ext_resource type="Texture2D" uid="uid://dyad5n6usmugd" path="res://assets/gameover/fire2.png" id="2_tb0qo"]
+[ext_resource type="Texture2D" uid="uid://dnhl8cyfrlabh" path="res://assets/gameover/fire3.png" id="3_6yg4u"]
+[ext_resource type="Script" uid="uid://cp0rxu860hx4l" path="res://scenes/gameover.gd" id="4_2fa4m"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lfxu0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_kwbp2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_tb0qo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_6yg4u")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 2.0
+}]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" unique_id=1827543178]
+sprite_frames = SubResource("SpriteFrames_lfxu0")
+script = ExtResource("4_2fa4m")
+
+[node name="Timer" type="Timer" parent="." unique_id=304094097]
+wait_time = 5.0
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

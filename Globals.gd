@@ -1,5 +1,6 @@
 extends Node
 
+var gameovering = false
 var level1Minigames: Array[String] = ["transitions/brewcoffee","transitions/lift","transitions/dress","transitions/type","transitions/gamble"]
 var currentMinigame : int = 0
 var currentSpeed : int = 1
@@ -48,3 +49,8 @@ func transitionOutOfMinigame():
 		incrementFaster()
 	else:
 		get_tree().change_scene_to_file("res://scenes/transitions/countdown.tscn")
+
+func gameOver():
+	gameovering = true
+	resetRun()
+	get_tree().change_scene_to_file("res://scenes/levelselect.tscn")
