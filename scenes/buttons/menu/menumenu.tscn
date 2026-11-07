@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://btf84qwd8dxms"]
+
+[ext_resource type="Texture2D" uid="uid://bx43grmqw84q4" path="res://assets/menubuttons/menu.png" id="1_ck4di"]
+[ext_resource type="Script" uid="uid://c4nabl72ad7to" path="res://scenes/buttons/back_to_menu.gd" id="2_apw2b"]
+
+[sub_resource type="GDScript" id="GDScript_t7v6v"]
+
+[node name="StartButton" type="Button" unique_id=232167011]
+offset_right = 144.0
+offset_bottom = 95.0
+script = SubResource("GDScript_t7v6v")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1787507612]
+position = Vector2(122.99963, 80.930084)
+scale = Vector2(0.2370912, 0.23709123)
+texture = ExtResource("1_ck4di")
+script = ExtResource("2_apw2b")
