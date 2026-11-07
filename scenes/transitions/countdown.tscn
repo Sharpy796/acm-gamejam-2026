@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bumcc7pk2u36n" path="res://assets/countdown/countdown_go.png" id="1_36pj8"]
 [ext_resource type="Texture2D" uid="uid://dufkk42o1i1g7" path="res://assets/countdown/countdown_2.png" id="2_4rwbn"]
 [ext_resource type="Texture2D" uid="uid://byjm07ch7kvly" path="res://assets/countdown/countdown_3.png" id="3_36pj8"]
-[ext_resource type="Script" uid="uid://d0t8uud3j4t84" path="res://scenes/animate_countdown.gd" id="4_4rwbn"]
+[ext_resource type="Script" uid="uid://d0t8uud3j4t84" path="res://scenes/transitions/animate_countdown.gd" id="4_4rwbn"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0xc00"]
 animations = [{
@@ -28,10 +28,6 @@ animations = [{
 
 [node name="Node2D" type="Node2D" unique_id=645247236]
 
-[node name="Timer" type="Timer" parent="." unique_id=401756998]
-wait_time = 0.5
-autostart = true
-
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=813291725]
 position = Vector2(590, 326)
 rotation = -0.102675915
@@ -41,4 +37,7 @@ frame = 3
 speed_scale = 0.0
 script = ExtResource("4_4rwbn")
 
-[connection signal="timeout" from="Timer" to="AnimatedSprite2D" method="_on_timer_timeout"]
+[node name="Timer" type="Timer" parent="AnimatedSprite2D" unique_id=401756998]
+wait_time = 0.5
+
+[connection signal="timeout" from="AnimatedSprite2D/Timer" to="AnimatedSprite2D" method="_on_timer_timeout"]

@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cojnmn625dom3" path="res://assets/minigameCoffee/CoffeeMachinePour3.png" id="5_jbuy0"]
 [ext_resource type="Texture2D" uid="uid://dgj4gnmgx35ig" path="res://assets/minigameCoffee/CoffeeMachinePour4.png" id="6_ywe2f"]
 [ext_resource type="Script" uid="uid://jgeylc4in02a" path="res://scenes/minigames/brewcoffee.gd" id="7_ydwok"]
-[ext_resource type="PackedScene" uid="uid://b8grj3hlb0vm8" path="res://scenes/timer.tscn" id="8_8x7uj"]
+[ext_resource type="PackedScene" uid="uid://b8grj3hlb0vm8" path="res://scenes/transitions/timer.tscn" id="8_8x7uj"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_lfxu0"]
 animations = [{

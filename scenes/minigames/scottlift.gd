@@ -11,7 +11,7 @@ func _input(event):
 		if event.keycode == KEY_SPACE:
 			if event.pressed and not spaceIsHeld:
 				frame = 1
-				progress += 10
+				progress += 20
 				timer.wait_time = .1
 				timer.one_shot = true
 				timer.start()
@@ -33,7 +33,7 @@ func _process(delta: float) -> void:
 
 func _on_timer_timeout() -> void:
 	if continuing:
-		get_tree().change_scene_to_file("res://scenes/countdown.tscn")
+		Globals.transitionOutOfMinigame()
 	elif progress < 100:
 		frame = 0
 	else:
