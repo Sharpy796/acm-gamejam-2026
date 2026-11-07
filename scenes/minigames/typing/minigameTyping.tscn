@@ -1,0 +1,152 @@
+[gd_scene format=3 uid="uid://bbwaljmiqkass"]
+
+[ext_resource type="Texture2D" uid="uid://dsrecml5kfmnq" path="res://assets/stuffnthings/cherryshock.png" id="1_87pr3"]
+[ext_resource type="PackedScene" uid="uid://b8grj3hlb0vm8" path="res://scenes/transitions/timer.tscn" id="1_vravi"]
+[ext_resource type="Texture2D" uid="uid://dosbok2ful6hr" path="res://assets/minigameTyping/letters/m1.png" id="2_i1k5m"]
+[ext_resource type="Texture2D" uid="uid://ck2jtttb24pjl" path="res://assets/stuffnthings/orangy.png" id="2_xgubd"]
+[ext_resource type="Texture2D" uid="uid://d2jgnt72p54jd" path="res://assets/minigameTyping/letters/m2.png" id="3_5hchr"]
+[ext_resource type="Script" uid="uid://psolj2e1lgeq" path="res://scenes/minigames/typing/minigameTyping.gd" id="3_xgubd"]
+[ext_resource type="Script" uid="uid://8bvad3l0g34i" path="res://scenes/minigames/typing/letter_m.gd" id="4_is7tm"]
+[ext_resource type="Texture2D" uid="uid://temwoglndn1c" path="res://assets/minigameTyping/letters/o1.png" id="4_xt5xp"]
+[ext_resource type="Texture2D" uid="uid://cg8d30yhinbix" path="res://assets/minigameTyping/letters/o2.png" id="5_pw5xd"]
+[ext_resource type="Texture2D" uid="uid://g6baxju5esk5" path="res://assets/minigameTyping/letters/n1.png" id="6_l3pp7"]
+[ext_resource type="Script" uid="uid://bsahxbeygqhow" path="res://scenes/minigames/typing/letter_o.gd" id="7_7pmfk"]
+[ext_resource type="Texture2D" uid="uid://bqvncn7i5q510" path="res://assets/minigameTyping/letters/n2.png" id="7_is7tm"]
+[ext_resource type="Texture2D" uid="uid://du2oajsid2hph" path="res://assets/minigameTyping/letters/e1.png" id="8_7pmfk"]
+[ext_resource type="Texture2D" uid="uid://ml7sbbphy624" path="res://assets/minigameTyping/letters/e2.png" id="9_87pr3"]
+[ext_resource type="Script" uid="uid://ck8io7p6lpeck" path="res://scenes/minigames/typing/letter_n.gd" id="10_87pr3"]
+[ext_resource type="Texture2D" uid="uid://baq58yp520llx" path="res://assets/minigameTyping/letters/y1.png" id="10_xgubd"]
+[ext_resource type="Texture2D" uid="uid://bc5h4og2dwb0l" path="res://assets/minigameTyping/letters/y2.png" id="11_ouc45"]
+[ext_resource type="Script" uid="uid://3cdk05d4gfi3" path="res://scenes/minigames/typing/letter_e.gd" id="13_xgubd"]
+[ext_resource type="Script" uid="uid://cejyagggianub" path="res://scenes/minigames/typing/letter_y.gd" id="16_ouc45"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ucim2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_87pr3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_xgubd")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hjb8m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_i1k5m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_5hchr")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 2.5
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lfxu0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_xt5xp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_pw5xd")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 2.5
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r6c0r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_l3pp7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_is7tm")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 2.5
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_odlsx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_7pmfk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_87pr3")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 2.5
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g2mn5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_xgubd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ouc45")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 2.5
+}]
+
+[node name="Node2D" type="Node2D" unique_id=1871124528]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2137640195]
+position = Vector2(536, 363)
+scale = Vector2(0.2697201, 0.2697201)
+sprite_frames = SubResource("SpriteFrames_ucim2")
+script = ExtResource("3_xgubd")
+
+[node name="Timer" type="Timer" parent="AnimatedSprite2D" unique_id=2125301021]
+
+[node name="M" type="AnimatedSprite2D" parent="AnimatedSprite2D" unique_id=628989544]
+position = Vector2(-804.5377, -863.8585)
+scale = Vector2(0.94864154, 0.9486419)
+sprite_frames = SubResource("SpriteFrames_hjb8m")
+script = ExtResource("4_is7tm")
+
+[node name="O" type="AnimatedSprite2D" parent="AnimatedSprite2D" unique_id=1316046786]
+position = Vector2(-294.29865, -865.38324)
+scale = Vector2(0.7386548, 0.73371786)
+sprite_frames = SubResource("SpriteFrames_lfxu0")
+frame_progress = 0.20138402
+script = ExtResource("7_7pmfk")
+
+[node name="N" type="AnimatedSprite2D" parent="AnimatedSprite2D" unique_id=414578830]
+position = Vector2(166.8396, -856.4435)
+scale = Vector2(0.8637104, 0.8637109)
+sprite_frames = SubResource("SpriteFrames_r6c0r")
+script = ExtResource("10_87pr3")
+
+[node name="E" type="AnimatedSprite2D" parent="AnimatedSprite2D" unique_id=2102416011]
+position = Vector2(596.81836, -856.21606)
+scale = Vector2(0.74691945, 0.74691975)
+sprite_frames = SubResource("SpriteFrames_odlsx")
+script = ExtResource("13_xgubd")
+
+[node name="Y" type="AnimatedSprite2D" parent="AnimatedSprite2D" unique_id=701063032]
+position = Vector2(924.3856, -878.001)
+scale = Vector2(0.6866996, 0.68669987)
+sprite_frames = SubResource("SpriteFrames_g2mn5")
+script = ExtResource("16_ouc45")
+
+[node name="timer" parent="." unique_id=1188562089 instance=ExtResource("1_vravi")]
+position = Vector2(579, 577)
+
+[connection signal="minigame_completed" from="AnimatedSprite2D" to="timer" method="_on_animated_sprite_2d_minigame_completed"]
+[connection signal="timeout" from="AnimatedSprite2D/Timer" to="AnimatedSprite2D" method="_on_timer_timeout"]

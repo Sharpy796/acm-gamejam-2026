@@ -7,6 +7,7 @@ func _ready() -> void:
 	timer.wait_time = 1*Globals.getTimerAdjustment()
 	timer.one_shot = false
 	timer.start()
+	speed_scale = 1.0/Globals.getTimerAdjustment()*(2.0/3.0)
 	play()
 
 
