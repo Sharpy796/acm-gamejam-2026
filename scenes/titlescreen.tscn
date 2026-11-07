@@ -27,6 +27,7 @@ offset_right = 811.0
 offset_bottom = 621.0
 
 [node name="ExtrasButton" parent="." unique_id=296104421 instance=ExtResource("4_v6ms7")]
+modulate = Color(0.3019608, 0.3019608, 0.3019608, 1)
 offset_left = 833.0
 offset_top = 419.0
 offset_right = 977.0
