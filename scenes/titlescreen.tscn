@@ -20,19 +20,19 @@ offset_top = 420.0
 offset_right = 810.0
 offset_bottom = 515.0
 
-[node name="StartButton2" parent="." unique_id=1387790787 instance=ExtResource("3_vhbaf")]
+[node name="CreditsButton" parent="." unique_id=1387790787 instance=ExtResource("3_vhbaf")]
 offset_left = 667.0
 offset_top = 526.0
 offset_right = 811.0
 offset_bottom = 621.0
 
-[node name="StartButton3" parent="." unique_id=296104421 instance=ExtResource("4_v6ms7")]
+[node name="ExtrasButton" parent="." unique_id=296104421 instance=ExtResource("4_v6ms7")]
 offset_left = 833.0
 offset_top = 419.0
 offset_right = 977.0
 offset_bottom = 514.0
 
-[node name="StartButton4" parent="." unique_id=18565419 instance=ExtResource("5_rpvs4")]
+[node name="QuitButton" parent="." unique_id=18565419 instance=ExtResource("5_rpvs4")]
 offset_left = 834.0
 offset_top = 526.0
 offset_right = 978.0
