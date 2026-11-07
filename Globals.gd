@@ -1,6 +1,6 @@
 extends Node
 
-var level1Minigames: Array[String] = ["transitions/brewcoffee","transitions/lift","minigames/dressUp/minigameDressUp","minigames/typing/minigameTyping","minigames/gamble/minigameGamble"]
+var level1Minigames: Array[String] = ["transitions/brewcoffee","transitions/lift","transitions/dress","transitions/type","transitions/gamble"]
 var currentMinigame : int = 0
 var currentSpeed : int = 1
 

@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://dkh11d6y1amrs"]
+
+[ext_resource type="Texture2D" uid="uid://bdcsrd5wygsig" path="res://assets/transitionsplashes/gamble/gamblesplash1.png" id="1_jutce"]
+[ext_resource type="Texture2D" uid="uid://d0wtc3ypf3glj" path="res://assets/transitionsplashes/gamble/gamblesplash2.png" id="2_sqic5"]
+[ext_resource type="Script" uid="uid://cy1wmhuf2kdum" path="res://scenes/transitions/transitiongamble.gd" id="3_jutce"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lfxu0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_jutce")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_sqic5")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D" unique_id=130098012]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1412288358]
+position = Vector2(578, 323)
+sprite_frames = SubResource("SpriteFrames_lfxu0")
+frame_progress = 0.9749294
+speed_scale = 2.0
+script = ExtResource("3_jutce")
+
+[node name="Timer" type="Timer" parent="AnimatedSprite2D" unique_id=1910458744]
+
+[connection signal="timeout" from="AnimatedSprite2D/Timer" to="AnimatedSprite2D" method="_on_timer_timeout"]
