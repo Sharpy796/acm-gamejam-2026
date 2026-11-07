@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://bw8c3f81qlol4"]
+
+[ext_resource type="Texture2D" uid="uid://dw6vqkjqadg0v" path="res://assets/transitionsplashes/lift/lift1.png" id="1_mspnj"]
+[ext_resource type="Texture2D" uid="uid://cudn6lr3erpjq" path="res://assets/transitionsplashes/lift/lift2.png" id="2_irtt8"]
+[ext_resource type="Texture2D" uid="uid://cfmkmp1ayl1o1" path="res://assets/transitionsplashes/lift/lift3.png" id="3_j7hl5"]
+[ext_resource type="Script" uid="uid://bjne8b626pjao" path="res://scenes/transitions/transitionlift.gd" id="4_mspnj"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lfxu0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_mspnj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_irtt8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_j7hl5")
+}],
+"loop": 2,
+"name": &"default",
+"speed": 3.75
+}]
+
+[node name="Node2D" type="Node2D" unique_id=130098012]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1412288358]
+position = Vector2(578, 323)
+sprite_frames = SubResource("SpriteFrames_lfxu0")
+frame_progress = 0.2311403
+speed_scale = 2.0
+script = ExtResource("4_mspnj")
+
+[node name="Timer" type="Timer" parent="AnimatedSprite2D" unique_id=1910458744]
+
+[connection signal="timeout" from="AnimatedSprite2D/Timer" to="AnimatedSprite2D" method="_on_timer_timeout"]

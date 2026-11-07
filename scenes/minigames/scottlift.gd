@@ -38,7 +38,7 @@ func _on_timer_timeout() -> void:
 		frame = 0
 	else:
 		frame = 2
-		timer.wait_time = 1.5
+		timer.wait_time = 1.5*Globals.getTimerAdjustment()
 		timer.one_shot = true
 		timer.start()
 		continuing = true
