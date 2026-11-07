@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bt7p8m5b12a8q"
-path="res://.godot/imported/MatthewHelmet.png-110eba72cd94957469abca0809ce3d87.ctex"
+uid="uid://cses5xy1hkwp2"
+path="res://.godot/imported/miniOveralls.png-e51fb0ca42eeec2dab4fc0c59605b57c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/minigameDressUp/MatthewHelmet.png"
-dest_files=["res://.godot/imported/MatthewHelmet.png-110eba72cd94957469abca0809ce3d87.ctex"]
+source_file="res://assets/minigameDressUp/miniOveralls.png"
+dest_files=["res://.godot/imported/miniOveralls.png-e51fb0ca42eeec2dab4fc0c59605b57c.ctex"]
 
 [params]
 
