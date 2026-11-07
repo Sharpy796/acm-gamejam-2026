@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dye4n0hwxmgur"
-path="res://.godot/imported/SkeleGuyLiftSuccess.png-a1e1be8276da433b7167e13ed4dfae91.ctex"
+uid="uid://dxkn8go6t6xu7"
+path="res://.godot/imported/ScottGuyLiftStruggle2.png-da162d75d4dc37aeb8dbe14bd92f9577.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/minigameWeights/SkeleGuyLiftSuccess.png"
-dest_files=["res://.godot/imported/SkeleGuyLiftSuccess.png-a1e1be8276da433b7167e13ed4dfae91.ctex"]
+source_file="res://assets/minigameWeights/ScottGuyLiftStruggle2.png"
+dest_files=["res://.godot/imported/ScottGuyLiftStruggle2.png-da162d75d4dc37aeb8dbe14bd92f9577.ctex"]
 
 [params]
 
