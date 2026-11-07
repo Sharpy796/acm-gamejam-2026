@@ -15,6 +15,6 @@ func _process(delta: float) -> void:
 func _on_timer_timeout() -> void:
 	countdown -= 1
 	if countdown < 0:
-		get_tree().change_scene_to_file("res://scenes/levelselect.tscn")
+		get_tree().change_scene_to_file("res://scenes/minigames/%s.tscn" % ["minigame1"].pick_random())
 	else:
 		frame = countdown

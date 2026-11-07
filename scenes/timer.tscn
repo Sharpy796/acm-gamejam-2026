@@ -32,10 +32,11 @@ animations = [{
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" unique_id=1188562089]
 sprite_frames = SubResource("SpriteFrames_lfxu0")
-frame_progress = 0.2640756
+frame_progress = 0.47421378
 script = ExtResource("6_qso1l")
 
 [node name="Timer" type="Timer" parent="." unique_id=7976175]
+wait_time = 0.25
 autostart = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
