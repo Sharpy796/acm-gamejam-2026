@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bhyhesls3fi7w"]
 
 [ext_resource type="Texture2D" uid="uid://bpoj1xcm78iqt" path="res://assets/menubuttons/credits.png" id="1_vku05"]
+[ext_resource type="Script" uid="uid://bvbxgvxulx61u" path="res://scenes/buttons/menu/credits.gd" id="2_phjkt"]
 
 [sub_resource type="GDScript" id="GDScript_t7v6v"]
 
@@ -13,3 +14,6 @@ script = SubResource("GDScript_t7v6v")
 position = Vector2(72, 48.000015)
 scale = Vector2(0.13835037, 0.13835038)
 texture = ExtResource("1_vku05")
+script = ExtResource("2_phjkt")
+
+[connection signal="pressed" from="." to="Sprite2D" method="_on_start_button_pressed"]
