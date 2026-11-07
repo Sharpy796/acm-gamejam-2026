@@ -38,7 +38,7 @@ animations = [{
 [node name="Node2D" type="Node2D" unique_id=807636056]
 position = Vector2(0, -3)
 
-[node name="coffeemachine" type="AnimatedSprite2D" parent="." unique_id=1058978877]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1058978877]
 position = Vector2(828, 327)
 scale = Vector2(0.60231483, 0.60231483)
 sprite_frames = SubResource("SpriteFrames_lfxu0")
@@ -47,9 +47,9 @@ frame_progress = 1.0
 speed_scale = 2.5
 script = ExtResource("7_ydwok")
 
-[node name="Timer" type="Timer" parent="coffeemachine" unique_id=526979355]
+[node name="Timer" type="Timer" parent="AnimatedSprite2D" unique_id=526979355]
 
-[node name="Button" type="Button" parent="coffeemachine" unique_id=1315659515]
+[node name="Button" type="Button" parent="AnimatedSprite2D" unique_id=1315659515]
 modulate = Color(1, 1, 1, 0)
 offset_left = -385.737
 offset_top = -389.26117
@@ -60,6 +60,6 @@ rotation = -3.3117018
 [node name="timer" parent="." unique_id=1188562089 instance=ExtResource("8_8x7uj")]
 position = Vector2(579, 577)
 
-[connection signal="timeout" from="coffeemachine/Timer" to="coffeemachine" method="_on_timer_timeout"]
-[connection signal="pressed" from="coffeemachine/Button" to="coffeemachine" method="_on_button_pressed"]
-[connection signal="pressed" from="coffeemachine/Button" to="timer" method="_on_button_pressed"]
+[connection signal="minigame_completed" from="AnimatedSprite2D" to="timer" method="_on_animated_sprite_2d_minigame_completed"]
+[connection signal="timeout" from="AnimatedSprite2D/Timer" to="AnimatedSprite2D" method="_on_timer_timeout"]
+[connection signal="pressed" from="AnimatedSprite2D/Button" to="AnimatedSprite2D" method="_on_button_pressed"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dxkn8go6t6xu7"
-path="res://.godot/imported/ScottGuyLiftStruggle2.png-da162d75d4dc37aeb8dbe14bd92f9577.ctex"
+uid="uid://de5vpsjl3pc70"
+path="res://.godot/imported/ScottLiftStruggle2.png-2b5c86bfa2bc70a1a52c3f30f48fafc2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/minigameWeights/ScottGuyLiftStruggle2.png"
-dest_files=["res://.godot/imported/ScottGuyLiftStruggle2.png-da162d75d4dc37aeb8dbe14bd92f9577.ctex"]
+source_file="res://assets/minigameWeights/ScottLiftStruggle2.png"
+dest_files=["res://.godot/imported/ScottLiftStruggle2.png-2b5c86bfa2bc70a1a52c3f30f48fafc2.ctex"]
 
 [params]
 

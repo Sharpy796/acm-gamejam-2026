@@ -20,7 +20,5 @@ func _on_timer_timeout() -> void:
 	else:
 		frame = countdown
 
-
-func _on_button_pressed() -> void:
+func _on_animated_sprite_2d_minigame_completed() -> void:
 	timer.stop()
-	
