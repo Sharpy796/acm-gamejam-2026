@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://n18hwtunurlr"
-path="res://.godot/imported/RamonaComputer (1).png-c9cc18e91b555d3054ae837712db935d.ctex"
+uid="uid://dbqu7ru2n6fo6"
+path="res://.godot/imported/RamonaWorking.png-d92f2b5a392ca5c6f7fca0e3245551c4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/minigameTyping/RamonaComputer (1).png"
-dest_files=["res://.godot/imported/RamonaComputer (1).png-c9cc18e91b555d3054ae837712db935d.ctex"]
+source_file="res://assets/minigameTyping/RamonaWorking.png"
+dest_files=["res://.godot/imported/RamonaWorking.png-d92f2b5a392ca5c6f7fca0e3245551c4.ctex"]
 
 [params]
 

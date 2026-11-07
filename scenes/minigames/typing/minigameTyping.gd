@@ -18,13 +18,13 @@ func _input(event):
 	if event is InputEventKey and event.pressed and not completed:
 		if event.as_text() == letters[progress]:
 			progress += 1
-			get_node(event.as_text()).modulate.a = .6
+			get_node(event.as_text()).modulate.a = 1.0
 			if progress >= letters.size():
 				succeed()
 		else:
 			progress = 0
 			for letter in letters:
-				get_node(letter).modulate.a = 1.0
+				get_node(letter).modulate.a = 112.0/255.0
 
 
 # Called when the node enters the scene tree for the first time.

@@ -1,10 +1,11 @@
 [gd_scene format=3 uid="uid://bbwaljmiqkass"]
 
-[ext_resource type="Texture2D" uid="uid://dsrecml5kfmnq" path="res://assets/stuffnthings/cherryshock.png" id="1_87pr3"]
+[ext_resource type="Texture2D" uid="uid://dbqu7ru2n6fo6" path="res://assets/minigameTyping/RamonaWorking.png" id="1_ouc45"]
 [ext_resource type="PackedScene" uid="uid://b8grj3hlb0vm8" path="res://scenes/transitions/timer.tscn" id="1_vravi"]
+[ext_resource type="Texture2D" uid="uid://5bgnkvpx411o" path="res://assets/minigameTyping/RamonaSuccessMoney.png" id="2_5eq5o"]
 [ext_resource type="Texture2D" uid="uid://dosbok2ful6hr" path="res://assets/minigameTyping/letters/m1.png" id="2_i1k5m"]
-[ext_resource type="Texture2D" uid="uid://ck2jtttb24pjl" path="res://assets/stuffnthings/orangy.png" id="2_xgubd"]
 [ext_resource type="Texture2D" uid="uid://d2jgnt72p54jd" path="res://assets/minigameTyping/letters/m2.png" id="3_5hchr"]
+[ext_resource type="Texture2D" uid="uid://lp53pcx85am2" path="res://assets/minigameTyping/RamonaSuccess.png" id="3_e5vfh"]
 [ext_resource type="Script" uid="uid://psolj2e1lgeq" path="res://scenes/minigames/typing/minigameTyping.gd" id="3_xgubd"]
 [ext_resource type="Script" uid="uid://8bvad3l0g34i" path="res://scenes/minigames/typing/letter_m.gd" id="4_is7tm"]
 [ext_resource type="Texture2D" uid="uid://temwoglndn1c" path="res://assets/minigameTyping/letters/o1.png" id="4_xt5xp"]
@@ -24,10 +25,13 @@
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_87pr3")
+"texture": ExtResource("1_ouc45")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_xgubd")
+"texture": ExtResource("2_5eq5o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_e5vfh")
 }],
 "loop": 1,
 "name": &"default",
@@ -107,41 +111,46 @@ animations = [{
 [node name="Node2D" type="Node2D" unique_id=1871124528]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2137640195]
-position = Vector2(536, 363)
-scale = Vector2(0.2697201, 0.2697201)
+position = Vector2(872, 372.00003)
+scale = Vector2(0.5222222, 0.5222222)
 sprite_frames = SubResource("SpriteFrames_ucim2")
 script = ExtResource("3_xgubd")
 
 [node name="Timer" type="Timer" parent="AnimatedSprite2D" unique_id=2125301021]
 
 [node name="M" type="AnimatedSprite2D" parent="AnimatedSprite2D" unique_id=628989544]
-position = Vector2(-804.5377, -863.8585)
-scale = Vector2(0.94864154, 0.9486419)
+modulate = Color(1, 1, 1, 0.4392157)
+position = Vector2(-1432.3405, -451.91498)
+scale = Vector2(0.5047389, 0.50473917)
 sprite_frames = SubResource("SpriteFrames_hjb8m")
 script = ExtResource("4_is7tm")
 
 [node name="O" type="AnimatedSprite2D" parent="AnimatedSprite2D" unique_id=1316046786]
-position = Vector2(-294.29865, -865.38324)
-scale = Vector2(0.7386548, 0.73371786)
+modulate = Color(1, 1, 1, 0.4392157)
+position = Vector2(-1161.245, -457.8221)
+scale = Vector2(0.3939298, 0.3912969)
 sprite_frames = SubResource("SpriteFrames_lfxu0")
 frame_progress = 0.20138402
 script = ExtResource("7_7pmfk")
 
 [node name="N" type="AnimatedSprite2D" parent="AnimatedSprite2D" unique_id=414578830]
-position = Vector2(166.8396, -856.4435)
-scale = Vector2(0.8637104, 0.8637109)
+modulate = Color(1, 1, 1, 0.4392157)
+position = Vector2(-914.42456, -448.2687)
+scale = Vector2(0.46033934, 0.4603396)
 sprite_frames = SubResource("SpriteFrames_r6c0r")
 script = ExtResource("10_87pr3")
 
 [node name="E" type="AnimatedSprite2D" parent="AnimatedSprite2D" unique_id=2102416011]
-position = Vector2(596.81836, -856.21606)
-scale = Vector2(0.74691945, 0.74691975)
+modulate = Color(1, 1, 1, 0.4392157)
+position = Vector2(-692.0963, -463.56683)
+scale = Vector2(0.37982842, 0.37982857)
 sprite_frames = SubResource("SpriteFrames_odlsx")
 script = ExtResource("13_xgubd")
 
 [node name="Y" type="AnimatedSprite2D" parent="AnimatedSprite2D" unique_id=701063032]
-position = Vector2(924.3856, -878.001)
-scale = Vector2(0.6866996, 0.68669987)
+modulate = Color(1, 1, 1, 0.4392157)
+position = Vector2(-527.41534, -465.48175)
+scale = Vector2(0.34920505, 0.34920517)
 sprite_frames = SubResource("SpriteFrames_g2mn5")
 script = ExtResource("16_ouc45")
 
