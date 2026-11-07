@@ -1,0 +1,86 @@
+[gd_scene format=3 uid="uid://b7d6gin30g437"]
+
+[ext_resource type="PackedScene" uid="uid://b8grj3hlb0vm8" path="res://scenes/transitions/timer.tscn" id="1_sefyb"]
+[ext_resource type="Texture2D" uid="uid://dsrecml5kfmnq" path="res://assets/stuffnthings/cherryshock.png" id="1_unvj8"]
+[ext_resource type="Script" uid="uid://duph7mv32k6u5" path="res://scenes/minigames/minigameDressUp.gd" id="2_bvvuo"]
+[ext_resource type="Texture2D" uid="uid://ck2jtttb24pjl" path="res://assets/stuffnthings/orangy.png" id="3_bvvuo"]
+[ext_resource type="Script" uid="uid://d3d8jsxvqab2w" path="res://scenes/minigames/outfit_0.gd" id="5_068jf"]
+[ext_resource type="Script" uid="uid://tx8tadh6qnj3" path="res://scenes/minigames/outfit_1.gd" id="6_yh0pg"]
+[ext_resource type="Script" uid="uid://g4j44o2vnn5g" path="res://scenes/minigames/outfit_2.gd" id="7_iltkt"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fgrfx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_unvj8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_bvvuo")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D" unique_id=224003325]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1426536134]
+position = Vector2(591, 301)
+scale = Vector2(0.36895674, 0.36895674)
+sprite_frames = SubResource("SpriteFrames_fgrfx")
+script = ExtResource("2_bvvuo")
+
+[node name="Timer" type="Timer" parent="AnimatedSprite2D" unique_id=1926184147]
+
+[node name="timer" parent="." unique_id=1188562089 instance=ExtResource("1_sefyb")]
+position = Vector2(579, 577)
+
+[node name="CanvasGroup" type="CanvasGroup" parent="." unique_id=594464506]
+
+[node name="Outfit0" type="Sprite2D" parent="." unique_id=1157564875]
+position = Vector2(145, 122.99999)
+scale = Vector2(0.137037, 0.137037)
+texture = ExtResource("3_bvvuo")
+script = ExtResource("5_068jf")
+
+[node name="ButtonOutfit0" type="Button" parent="Outfit0" unique_id=793473081]
+modulate = Color(1, 1, 1, 0)
+offset_left = -394.0542
+offset_top = -496.21637
+offset_right = 394.0542
+offset_bottom = 496.21637
+
+[node name="Outfit1" type="Sprite2D" parent="." unique_id=568203326]
+position = Vector2(312, 307)
+scale = Vector2(0.137037, 0.137037)
+texture = ExtResource("3_bvvuo")
+script = ExtResource("6_yh0pg")
+
+[node name="ButtonOutfit1" type="Button" parent="Outfit1" unique_id=1532678503]
+modulate = Color(1, 1, 1, 0)
+offset_left = -394.0542
+offset_top = -496.21637
+offset_right = 394.0542
+offset_bottom = 496.21637
+
+[node name="Outfit2" type="Sprite2D" parent="." unique_id=303766211]
+position = Vector2(975, 313)
+scale = Vector2(0.137037, 0.137037)
+texture = ExtResource("3_bvvuo")
+script = ExtResource("7_iltkt")
+
+[node name="ButtonOutfit2" type="Button" parent="Outfit2" unique_id=361312892]
+modulate = Color(1, 1, 1, 0)
+offset_left = -394.0542
+offset_top = -496.21637
+offset_right = 394.0542
+offset_bottom = 496.21637
+
+[connection signal="minigame_completed" from="AnimatedSprite2D" to="timer" method="_on_animated_sprite_2d_minigame_completed"]
+[connection signal="timeout" from="AnimatedSprite2D/Timer" to="AnimatedSprite2D" method="_on_timer_timeout"]
+[connection signal="pressed" from="Outfit0/ButtonOutfit0" to="AnimatedSprite2D" method="_on_button_outfit_0_pressed"]
+[connection signal="pressed" from="Outfit0/ButtonOutfit0" to="Outfit0" method="_on_button_outfit_0_pressed"]
+[connection signal="pressed" from="Outfit1/ButtonOutfit1" to="AnimatedSprite2D" method="_on_button_outfit_1_pressed"]
+[connection signal="pressed" from="Outfit1/ButtonOutfit1" to="Outfit1" method="_on_button_outfit_1_pressed"]
+[connection signal="pressed" from="Outfit2/ButtonOutfit2" to="AnimatedSprite2D" method="_on_button_outfit_2_pressed"]
+[connection signal="pressed" from="Outfit2/ButtonOutfit2" to="Outfit2" method="_on_button_outfit_2_pressed"]

@@ -27,7 +27,7 @@ animations = [{
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1412288358]
 position = Vector2(578, 323)
 sprite_frames = SubResource("SpriteFrames_lfxu0")
-frame_progress = 0.2311403
+frame_progress = 0.83992153
 speed_scale = 2.0
 script = ExtResource("4_mspnj")
 

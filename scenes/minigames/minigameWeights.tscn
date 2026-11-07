@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://de5vpsjl3pc70" path="res://assets/minigameWeights/ScottLiftStruggle2.png" id="1_23dtb"]
 [ext_resource type="Texture2D" uid="uid://dwb3rnf002jv7" path="res://assets/minigameWeights/ScottLiftStruggle1.png" id="2_nu5a0"]
 [ext_resource type="Texture2D" uid="uid://dye4n0hwxmgur" path="res://assets/minigameWeights/ScottLiftSuccess.png" id="3_x30j2"]
-[ext_resource type="Script" uid="uid://bgf4b3t8fywty" path="res://scenes/minigames/scottlift.gd" id="4_nu5a0"]
+[ext_resource type="Script" uid="uid://bgf4b3t8fywty" path="res://scenes/minigames/minigameWeights.gd" id="4_nu5a0"]
 [ext_resource type="PackedScene" uid="uid://b8grj3hlb0vm8" path="res://scenes/transitions/timer.tscn" id="8_pee3o"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hjb8m"]

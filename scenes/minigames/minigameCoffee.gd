@@ -15,7 +15,7 @@ func _process(delta: float) -> void:
 
 func _on_button_pressed() -> void:
 	play()
-	timer.wait_time = 1.5*Globals.getTimerAdjustment()
+	timer.wait_time = 1.5
 	timer.one_shot = true
 	timer.start()
 	minigame_completed.emit()
