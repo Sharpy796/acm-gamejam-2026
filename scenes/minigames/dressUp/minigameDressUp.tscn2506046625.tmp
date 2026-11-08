@@ -1,0 +1,176 @@
+[gd_scene format=3 uid="uid://b7d6gin30g437"]
+
+[ext_resource type="Texture2D" uid="uid://cqqdhse4tdqdl" path="res://assets/minigameDressUp/MimicMatthew.png" id="1_m8ovm"]
+[ext_resource type="PackedScene" uid="uid://b8grj3hlb0vm8" path="res://scenes/transitions/timer.tscn" id="1_sefyb"]
+[ext_resource type="Script" uid="uid://duph7mv32k6u5" path="res://scenes/minigames/dressUp/minigameDressUp.gd" id="2_bvvuo"]
+[ext_resource type="Texture2D" uid="uid://c8l3hta563aw7" path="res://assets/minigameDressUp/MimicMatthewSuccess.png" id="2_hl430"]
+[ext_resource type="Texture2D" uid="uid://bar4ornfflfok" path="res://assets/minigameDressUp/MatthewMimicHairless.png" id="3_t86n1"]
+[ext_resource type="Texture2D" uid="uid://wo3kwphmawqk" path="res://assets/minigameDressUp/MimicMatthewSuccessHelmet.png" id="4_g36te"]
+[ext_resource type="Script" uid="uid://d3d8jsxvqab2w" path="res://scenes/minigames/dressUp/outfit_0.gd" id="5_068jf"]
+[ext_resource type="Texture2D" uid="uid://deagsqecskkei" path="res://assets/minigameDressUp/ClothingDress.png" id="6_e26u1"]
+[ext_resource type="Script" uid="uid://tx8tadh6qnj3" path="res://scenes/minigames/dressUp/outfit_1.gd" id="6_yh0pg"]
+[ext_resource type="Script" uid="uid://g4j44o2vnn5g" path="res://scenes/minigames/dressUp/outfit_2.gd" id="7_iltkt"]
+[ext_resource type="Texture2D" uid="uid://b50rq6v0h0qhh" path="res://assets/minigameDressUp/ClothingHelmet.png" id="7_p6u7x"]
+[ext_resource type="Texture2D" uid="uid://g1462xm01aj" path="res://assets/minigameDressUp/ClothingOveralls.png" id="8_jeu1h"]
+[ext_resource type="Texture2D" uid="uid://dhinlx7f8nvei" path="res://assets/minigameDressUp/thoughtDress.png" id="9_p6u7x"]
+[ext_resource type="Texture2D" uid="uid://bvnxpftn84y6u" path="res://assets/minigameDressUp/thoughtHelmet.png" id="10_jeu1h"]
+[ext_resource type="Texture2D" uid="uid://bjfhdvwl8r82u" path="res://assets/minigameDressUp/miniDress.png" id="10_t86n1"]
+[ext_resource type="Texture2D" uid="uid://c1v42hf1w6m1y" path="res://assets/minigameDressUp/thoughtOveralls.png" id="11_rot8g"]
+[ext_resource type="Texture2D" uid="uid://crseu7xvipalm" path="res://assets/minigameDressUp/miniHelmet.png" id="12_g36te"]
+[ext_resource type="Texture2D" uid="uid://cses5xy1hkwp2" path="res://assets/minigameDressUp/miniOveralls.png" id="14_e26u1"]
+[ext_resource type="PackedScene" uid="uid://d3w3jvbg0d7ev" path="res://scenes/gameover.tscn" id="19_jeu1h"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fgrfx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_m8ovm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_hl430")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_t86n1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_g36te")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lfxu0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_e26u1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_p6u7x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_jeu1h")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hjb8m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_p6u7x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_jeu1h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_rot8g")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_jeu1h"]
+points = PackedVector2Array(-98.47827, -53.472595, -33.915527, -46.676514, -61.099854, 272.7392, 380.64526, 221.76855, 132.58838, -410.26666, 17.054932, -291.3353, -135.85669, -383.08237)
+
+[node name="Node2D" type="Node2D" unique_id=224003325]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1426536134]
+position = Vector2(384, 378)
+scale = Vector2(0.23255245, 0.23255251)
+sprite_frames = SubResource("SpriteFrames_fgrfx")
+script = ExtResource("2_bvvuo")
+
+[node name="Timer" type="Timer" parent="AnimatedSprite2D" unique_id=1926184147]
+
+[node name="Clothing" type="AnimatedSprite2D" parent="AnimatedSprite2D" unique_id=947565475]
+visible = false
+sprite_frames = SubResource("SpriteFrames_lfxu0")
+
+[node name="Thought" type="AnimatedSprite2D" parent="AnimatedSprite2D" unique_id=663904796]
+position = Vector2(747.4379, -1013.39703)
+sprite_frames = SubResource("SpriteFrames_hjb8m")
+
+[node name="Outfit0" type="Sprite2D" parent="." unique_id=1157564875]
+position = Vector2(827.82404, 220.78767)
+scale = Vector2(0.2942874, 0.2942874)
+texture = ExtResource("10_t86n1")
+script = ExtResource("5_068jf")
+
+[node name="Area2D" type="Area2D" parent="Outfit0" unique_id=834585775]
+position = Vector2(-547, -287)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Outfit0/Area2D" unique_id=2131142161]
+position = Vector2(432, 331)
+shape = SubResource("ConvexPolygonShape2D_jeu1h")
+
+[node name="ButtonOutfit0" type="Button" parent="Outfit0" unique_id=793473081]
+visible = false
+modulate = Color(1, 1, 1, 0)
+offset_left = -218.91943
+offset_top = -313.78403
+offset_right = 218.91943
+offset_bottom = 313.78372
+metadata/_edit_use_anchors_ = true
+
+[node name="Outfit1" type="Sprite2D" parent="." unique_id=568203326]
+position = Vector2(677.82416, 305.7877)
+scale = Vector2(0.40943134, 0.40943134)
+texture = ExtResource("12_g36te")
+script = ExtResource("6_yh0pg")
+
+[node name="ButtonOutfit1" type="Button" parent="Outfit1" unique_id=1532678503]
+modulate = Color(1, 1, 1, 0)
+offset_left = -153.24329
+offset_top = -167.83783
+offset_right = 153.24329
+offset_bottom = 167.83783
+metadata/_edit_use_anchors_ = true
+
+[node name="Area2D" type="Area2D" parent="Outfit1" unique_id=550116156]
+position = Vector2(-153.24329, -167.83783)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Outfit1/Area2D" unique_id=443381639]
+polygon = PackedVector2Array(139.01831, 87.756775, 68.188354, 97.52643, 4.685669, 161.02911, 19.340088, 207.43494, -0.19909668, 241.62872, 53.533936, 334.44037, 207.40588, 290.477, 236.71484, 204.99255, 214.73315, 129.27777, 170.76965, 97.52643, 214.73315, 75.54474, 302.6599, 92.6416, 312.42957, 51.120605, 266.0238, -2.6124878, 187.86658, 9.599609, 143.9032, 60.89026)
+
+[node name="Outfit2" type="Sprite2D" parent="." unique_id=303766211]
+position = Vector2(805, 442)
+scale = Vector2(0.47158906, 0.47158906)
+texture = ExtResource("14_e26u1")
+script = ExtResource("7_iltkt")
+
+[node name="ButtonOutfit2" type="Button" parent="Outfit2" unique_id=361312892]
+modulate = Color(1, 1, 1, 0)
+offset_left = -114.13365
+offset_top = -169.18901
+offset_right = 119.37953
+offset_bottom = 166.48677
+metadata/_edit_use_anchors_ = true
+
+[node name="Area2D" type="Area2D" parent="Outfit2" unique_id=2025013115]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Outfit2/Area2D" unique_id=1659116289]
+polygon = PackedVector2Array(-78.45813, -167.51874, -82.69922, -82.6991, -118.74756, -63.614685, -108.14502, 48.7713, -110.2655, 163.27771, -55.132813, 171.75977, -6.3615723, 159.03674, -2.1204834, 93.301636, 10.602417, 91.18103, 14.843384, 165.3982, 72.09668, 169.63928, 118.74744, 159.03674, 106.024414, 46.650818, 120.86792, -63.614685, 95.422, -82.6991, 99.662964, -167.51874, 63.614624, -167.51874, 57.253174, -91.18109, -40.289307, -91.18109, -42.409912, -167.51874)
+
+[node name="timer" parent="." unique_id=1188562089 instance=ExtResource("1_sefyb")]
+position = Vector2(579, 577)
+
+[node name="gameover" parent="." unique_id=1827543178 instance=ExtResource("19_jeu1h")]
+visible = false
+position = Vector2(576, 324)
+
+[connection signal="minigame_completed" from="AnimatedSprite2D" to="timer" method="_on_animated_sprite_2d_minigame_completed"]
+[connection signal="timeout" from="AnimatedSprite2D/Timer" to="AnimatedSprite2D" method="_on_timer_timeout"]
+[connection signal="mouse_entered" from="Outfit0/Area2D" to="Outfit0" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Outfit0/Area2D" to="Outfit0" method="_on_area_2d_mouse_exited"]
+[connection signal="pressed" from="Outfit0/ButtonOutfit0" to="AnimatedSprite2D" method="_on_button_outfit_0_pressed"]
+[connection signal="pressed" from="Outfit0/ButtonOutfit0" to="Outfit0" method="_on_button_outfit_0_pressed"]
+[connection signal="pressed" from="Outfit1/ButtonOutfit1" to="AnimatedSprite2D" method="_on_button_outfit_1_pressed"]
+[connection signal="pressed" from="Outfit1/ButtonOutfit1" to="Outfit1" method="_on_button_outfit_1_pressed"]
+[connection signal="pressed" from="Outfit2/ButtonOutfit2" to="AnimatedSprite2D" method="_on_button_outfit_2_pressed"]
+[connection signal="pressed" from="Outfit2/ButtonOutfit2" to="Outfit2" method="_on_button_outfit_2_pressed"]
+[connection signal="game_over" from="timer" to="gameover" method="_on_timer_game_over"]

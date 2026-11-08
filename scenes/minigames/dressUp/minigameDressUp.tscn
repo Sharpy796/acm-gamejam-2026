@@ -92,19 +92,22 @@ sprite_frames = SubResource("SpriteFrames_lfxu0")
 position = Vector2(747.4379, -1013.39703)
 sprite_frames = SubResource("SpriteFrames_hjb8m")
 
+[node name="Area2DMatt" type="Area2D" parent="AnimatedSprite2D" unique_id=1645694604]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="AnimatedSprite2D/Area2DMatt" unique_id=746040615]
+polygon = PackedVector2Array(-103.202515, -1053.5254, -262.3064, -911.6221, -275.20667, -670.8162, -197.80481, -528.9127, -460.1112, -339.70825, -563.3137, 116.102905, -485.91187, 387.0094, -421.41028, 464.41125, -417.11023, 731.0177, -339.70825, 1057.8256, -159.10388, 1100.8268, -30.100708, 1006.2245, -60.201416, 752.5182, 90.302246, 1014.8246, 348.30847, 1044.9254, 387.0094, 937.4227, 326.80798, 391.30957, 430.01062, 38.700928, 309.60754, -460.11108, 150.50366, -498.812, 249.40613, -847.1205, 90.302246, -1044.9253)
+
 [node name="Outfit0" type="Sprite2D" parent="." unique_id=1157564875]
 position = Vector2(827.82404, 220.78767)
 scale = Vector2(0.2942874, 0.2942874)
 texture = ExtResource("10_t86n1")
 script = ExtResource("5_068jf")
 
-[node name="ButtonOutfit0" type="Button" parent="Outfit0" unique_id=793473081]
-modulate = Color(1, 1, 1, 0)
-offset_left = -218.91943
-offset_top = -313.7839
-offset_right = 218.91943
-offset_bottom = 313.78384
-metadata/_edit_use_anchors_ = true
+[node name="Area2D0" type="Area2D" parent="Outfit0" unique_id=834585775]
+position = Vector2(-547, -287)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Outfit0/Area2D0" unique_id=1756100608]
+polygon = PackedVector2Array(316.53125, 22.6745, 374.29785, -1.1117554, 455.85083, 53.256836, 517.0156, -28.296082, 578.1802, -14.703918, 598.5686, 63.45099, 663.13135, 155.198, 652.937, 223.15881, 788.85864, 518.78815, 666.5293, 573.1568, 486.4331, 600.3411, 377.69604, 579.9528, 384.49194, 348.88623, 411.67627, 274.1294, 360.7058, 277.5274, 316.53125, 189.1784, 330.12354, 107.62549)
 
 [node name="Outfit1" type="Sprite2D" parent="." unique_id=568203326]
 position = Vector2(677.82416, 305.7877)
@@ -112,13 +115,11 @@ scale = Vector2(0.40943134, 0.40943134)
 texture = ExtResource("12_g36te")
 script = ExtResource("6_yh0pg")
 
-[node name="ButtonOutfit1" type="Button" parent="Outfit1" unique_id=1532678503]
-modulate = Color(1, 1, 1, 0)
-offset_left = -153.24329
-offset_top = -167.83783
-offset_right = 153.24329
-offset_bottom = 167.83783
-metadata/_edit_use_anchors_ = true
+[node name="Area2D1" type="Area2D" parent="Outfit1" unique_id=550116156]
+position = Vector2(-153.24329, -167.83783)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Outfit1/Area2D1" unique_id=443381639]
+polygon = PackedVector2Array(139.01831, 87.756775, 68.188354, 97.52643, 4.685669, 161.02911, 19.340088, 207.43494, -0.19909668, 241.62872, 53.533936, 334.44037, 207.40588, 290.477, 236.71484, 204.99255, 214.73315, 129.27777, 170.76965, 97.52643, 214.73315, 75.54474, 302.6599, 92.6416, 312.42957, 51.120605, 266.0238, -2.6124878, 187.86658, 9.599609, 143.9032, 60.89026)
 
 [node name="Outfit2" type="Sprite2D" parent="." unique_id=303766211]
 position = Vector2(805, 442)
@@ -126,26 +127,30 @@ scale = Vector2(0.47158906, 0.47158906)
 texture = ExtResource("14_e26u1")
 script = ExtResource("7_iltkt")
 
-[node name="ButtonOutfit2" type="Button" parent="Outfit2" unique_id=361312892]
-modulate = Color(1, 1, 1, 0)
-offset_left = -114.13365
-offset_top = -169.18901
-offset_right = 119.37953
-offset_bottom = 166.48677
-metadata/_edit_use_anchors_ = true
+[node name="Area2D2" type="Area2D" parent="Outfit2" unique_id=2025013115]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Outfit2/Area2D2" unique_id=1659116289]
+polygon = PackedVector2Array(-78.45813, -167.51874, -82.69922, -82.6991, -118.74756, -63.614685, -108.14502, 48.7713, -110.2655, 163.27771, -55.132813, 171.75977, -6.3615723, 159.03674, -2.1204834, 93.301636, 10.602417, 91.18103, 14.843384, 165.3982, 72.09668, 169.63928, 118.74744, 159.03674, 106.024414, 46.650818, 120.86792, -63.614685, 95.422, -82.6991, 99.662964, -167.51874, 63.614624, -167.51874, 57.253174, -91.18109, -40.289307, -91.18109, -42.409912, -167.51874)
 
 [node name="timer" parent="." unique_id=1188562089 instance=ExtResource("1_sefyb")]
 position = Vector2(579, 577)
 
 [node name="gameover" parent="." unique_id=1827543178 instance=ExtResource("19_jeu1h")]
-position = Vector2(576, 327)
+visible = false
+position = Vector2(576, 324)
 
+[connection signal="found_0" from="AnimatedSprite2D" to="Outfit0" method="_on_animated_sprite_2d_found_0"]
+[connection signal="found_1" from="AnimatedSprite2D" to="Outfit1" method="_on_animated_sprite_2d_found_1"]
+[connection signal="found_2" from="AnimatedSprite2D" to="Outfit2" method="_on_animated_sprite_2d_found_2"]
 [connection signal="minigame_completed" from="AnimatedSprite2D" to="timer" method="_on_animated_sprite_2d_minigame_completed"]
 [connection signal="timeout" from="AnimatedSprite2D/Timer" to="AnimatedSprite2D" method="_on_timer_timeout"]
-[connection signal="pressed" from="Outfit0/ButtonOutfit0" to="AnimatedSprite2D" method="_on_button_outfit_0_pressed"]
-[connection signal="pressed" from="Outfit0/ButtonOutfit0" to="Outfit0" method="_on_button_outfit_0_pressed"]
-[connection signal="pressed" from="Outfit1/ButtonOutfit1" to="AnimatedSprite2D" method="_on_button_outfit_1_pressed"]
-[connection signal="pressed" from="Outfit1/ButtonOutfit1" to="Outfit1" method="_on_button_outfit_1_pressed"]
-[connection signal="pressed" from="Outfit2/ButtonOutfit2" to="AnimatedSprite2D" method="_on_button_outfit_2_pressed"]
-[connection signal="pressed" from="Outfit2/ButtonOutfit2" to="Outfit2" method="_on_button_outfit_2_pressed"]
+[connection signal="area_shape_entered" from="Outfit0/Area2D0" to="AnimatedSprite2D" method="_on_area_2d_0_area_shape_entered"]
+[connection signal="mouse_entered" from="Outfit0/Area2D0" to="Outfit0" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Outfit0/Area2D0" to="Outfit0" method="_on_area_2d_mouse_exited"]
+[connection signal="area_shape_entered" from="Outfit1/Area2D1" to="AnimatedSprite2D" method="_on_area_2d_1_area_shape_entered"]
+[connection signal="mouse_entered" from="Outfit1/Area2D1" to="Outfit1" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Outfit1/Area2D1" to="Outfit1" method="_on_area_2d_mouse_exited"]
+[connection signal="area_shape_entered" from="Outfit2/Area2D2" to="AnimatedSprite2D" method="_on_area_2d_2_area_shape_entered"]
+[connection signal="mouse_entered" from="Outfit2/Area2D2" to="Outfit2" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Outfit2/Area2D2" to="Outfit2" method="_on_area_2d_mouse_exited"]
 [connection signal="game_over" from="timer" to="gameover" method="_on_timer_game_over"]

@@ -1,11 +1,15 @@
 extends AnimatedSprite2D
 
 signal minigame_completed
+signal found_0
+signal found_1
+signal found_2
 @onready var timer: Timer = get_node("Timer")
 @onready var clothing: AnimatedSprite2D = get_node("Clothing")
 @onready var thought: AnimatedSprite2D = get_node("Thought")
 var random = RandomNumberGenerator.new()
 var outfit = -1
+var succeeded = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -24,6 +28,7 @@ func _on_timer_timeout() -> void:
 	Globals.transitionOutOfMinigame()
 
 func succeed():
+	succeeded = true
 	thought.hide()
 	clothing.show()
 	clothing.frame = outfit
@@ -58,3 +63,21 @@ func _on_button_outfit_2_pressed() -> void:
 		succeed()
 	else:
 		angry()
+
+
+func _on_area_2d_0_area_shape_entered(area_rid: RID, area: Area2D, area_shape_index: int, local_shape_index: int) -> void:
+	if outfit == 0 and not succeeded and area.name == "Area2DMatt":
+		found_0.emit()
+		succeed()
+
+
+func _on_area_2d_1_area_shape_entered(area_rid: RID, area: Area2D, area_shape_index: int, local_shape_index: int) -> void:
+	if outfit == 1 and not succeeded and area.name == "Area2DMatt":
+		found_1.emit()
+		succeed()
+
+
+func _on_area_2d_2_area_shape_entered(area_rid: RID, area: Area2D, area_shape_index: int, local_shape_index: int) -> void:
+	if outfit == 2 and not succeeded and area.name == "Area2DMatt":
+		found_2.emit()
+		succeed()
