@@ -39,6 +39,7 @@ func getCurrentMinigame():
 func incrementFaster():
 	currentSpeed += 1
 	if currentSpeed > 4: # you win!
+		resetRun()
 		get_tree().change_scene_to_file("res://scenes/endscreen.tscn")
 	else:
 		shuffleMinigames()
