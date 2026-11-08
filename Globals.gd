@@ -1,5 +1,6 @@
 extends Node
 
+var TOTAL_ROUNDS = 4
 var gameovering = false
 var level1Minigames: Array[String] = ["transitions/brewcoffee","transitions/lift","transitions/dress","transitions/type","transitions/gamble"]
 var currentMinigame : int = 0
@@ -38,7 +39,7 @@ func getCurrentMinigame():
 
 func incrementFaster():
 	currentSpeed += 1
-	if currentSpeed > 4: # you win!
+	if currentSpeed > TOTAL_ROUNDS: # you win!
 		resetRun()
 		get_tree().change_scene_to_file("res://scenes/endscreen.tscn")
 	else:
