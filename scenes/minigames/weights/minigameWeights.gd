@@ -2,17 +2,18 @@ extends AnimatedSprite2D
 
 signal minigame_completed
 @onready var timer: Timer = get_node("Timer")
+var gameOver = false
 var spaceIsHeld = false
 var progress = 0
 var continuing = false
 
 func _input(event):
-	if event is InputEventKey and progress < 100:
+	if event is InputEventKey and progress < 100 and not gameOver:
 		if event.keycode == KEY_SPACE:
 			if event.pressed and not spaceIsHeld:
 				frame = 1
 				progress += 20
-				timer.wait_time = .1
+				timer.wait_time = .15
 				timer.one_shot = true
 				timer.start()
 				spaceIsHeld = true
@@ -43,3 +44,7 @@ func _on_timer_timeout() -> void:
 		timer.start()
 		continuing = true
 		minigame_completed.emit()
+
+
+func _on_timer_game_over() -> void:
+	gameOver = true

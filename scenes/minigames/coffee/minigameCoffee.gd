@@ -2,6 +2,8 @@ extends AnimatedSprite2D
 
 signal minigame_completed
 @onready var timer: Timer = get_node("Timer")
+var succeeded = false
+var gameOver = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -14,12 +16,18 @@ func _process(delta: float) -> void:
 
 
 func _on_button_pressed() -> void:
-	play()
-	timer.wait_time = 1.5
-	timer.one_shot = true
-	timer.start()
-	minigame_completed.emit()
+	if not gameOver and not succeeded:
+		succeeded = true
+		play()
+		timer.wait_time = 1.5
+		timer.one_shot = true
+		timer.start()
+		minigame_completed.emit()
 
 
 func _on_timer_timeout() -> void:
 	Globals.transitionOutOfMinigame()
+
+
+func _on_timer_game_over() -> void:
+	gameOver = true

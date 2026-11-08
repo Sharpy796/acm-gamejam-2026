@@ -3,22 +3,24 @@ extends AnimatedSprite2D
 signal minigame_completed
 @onready var timer: Timer = get_node("Timer")
 var random = RandomNumberGenerator.new()
-var completed = false
+var succeeded = false
+var gameOver = false
 var progress = 0
 var clicking = false
 var hovering = false
 var GOAL = 500
 
 func succeed():
-	frame = 3 # happy sprite
-	timer.wait_time = 1.5*Globals.getTimerAdjustment()
-	timer.one_shot = true
-	timer.start()
-	minigame_completed.emit()
-	completed = true
+	if not gameOver:
+		frame = 3 # happy sprite
+		timer.wait_time = 1.5*Globals.getTimerAdjustment()
+		timer.one_shot = true
+		timer.start()
+		minigame_completed.emit()
+		succeeded = true
 
 func _input(event):
-	if not completed:
+	if not succeeded and not gameOver:
 		if event is InputEventMouseButton:
 			print("Clicked!")
 			clicking = event.pressed
@@ -34,7 +36,7 @@ func _input(event):
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	completed = false
+	succeeded = false
 	progress = 0
 	clicking = false
 	hovering = false
@@ -42,8 +44,8 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if progress >= GOAL and not completed:
-		completed = true
+	if progress >= GOAL and not succeeded:
+		succeeded = true
 		succeed()
 
 
@@ -57,3 +59,7 @@ func _on_area_2d_mouse_exited() -> void:
 
 func _on_timer_timeout() -> void:
 	Globals.transitionOutOfMinigame()
+
+
+func _on_timer_game_over() -> void:
+	gameOver = true

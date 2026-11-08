@@ -164,4 +164,5 @@ position = Vector2(576, 324)
 
 [connection signal="minigame_completed" from="AnimatedSprite2D" to="timer" method="_on_animated_sprite_2d_minigame_completed"]
 [connection signal="timeout" from="AnimatedSprite2D/Timer" to="AnimatedSprite2D" method="_on_timer_timeout"]
+[connection signal="game_over" from="timer" to="AnimatedSprite2D" method="_on_timer_game_over"]
 [connection signal="game_over" from="timer" to="gameover" method="_on_timer_game_over"]

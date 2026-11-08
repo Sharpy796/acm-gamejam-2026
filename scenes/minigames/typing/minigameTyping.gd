@@ -4,7 +4,8 @@ signal minigame_completed
 @onready var timer: Timer = get_node("Timer")
 var progress = 0
 var letters: Array[String] = ["M","O","N","E","Y"]
-var completed = false
+var succeeded = false
+var gameOver = false
 
 func succeed():
 	frame = 1 # happy sprite
@@ -12,10 +13,10 @@ func succeed():
 	timer.one_shot = true
 	timer.start()
 	minigame_completed.emit()
-	completed = true
+	succeeded = true
 
 func _input(event):
-	if event is InputEventKey and event.pressed and not completed:
+	if event is InputEventKey and event.pressed and not succeeded and not gameOver:
 		if event.as_text() == letters[progress]:
 			progress += 1
 			get_node(event.as_text()).modulate.a = 1.0
@@ -38,6 +39,9 @@ func _process(delta: float) -> void:
 	pass
 
 
-
 func _on_timer_timeout() -> void:
 	Globals.transitionOutOfMinigame()
+
+
+func _on_timer_game_over() -> void:
+	gameOver = true

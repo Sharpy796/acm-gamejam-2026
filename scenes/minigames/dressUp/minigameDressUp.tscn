@@ -153,4 +153,5 @@ position = Vector2(576, 324)
 [connection signal="area_shape_entered" from="Outfit2/Area2D2" to="AnimatedSprite2D" method="_on_area_2d_2_area_shape_entered"]
 [connection signal="mouse_entered" from="Outfit2/Area2D2" to="Outfit2" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="Outfit2/Area2D2" to="Outfit2" method="_on_area_2d_mouse_exited"]
+[connection signal="game_over" from="timer" to="AnimatedSprite2D" method="_on_timer_game_over"]
 [connection signal="game_over" from="timer" to="gameover" method="_on_timer_game_over"]
