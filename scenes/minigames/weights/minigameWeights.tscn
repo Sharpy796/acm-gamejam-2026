@@ -39,6 +39,7 @@ script = ExtResource("4_nu5a0")
 position = Vector2(579, 577)
 
 [node name="gameover" parent="." unique_id=1827543178 instance=ExtResource("6_qtswc")]
+visible = false
 position = Vector2(576, 327)
 
 [connection signal="minigame_completed" from="AnimatedSprite2D" to="timer" method="_on_animated_sprite_2d_minigame_completed"]

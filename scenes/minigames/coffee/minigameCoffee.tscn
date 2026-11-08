@@ -62,6 +62,7 @@ rotation = -3.3117018
 position = Vector2(579, 577)
 
 [node name="gameover" parent="." unique_id=1827543178 instance=ExtResource("9_jik7f")]
+visible = false
 position = Vector2(576, 327)
 
 [connection signal="minigame_completed" from="AnimatedSprite2D" to="timer" method="_on_animated_sprite_2d_minigame_completed"]

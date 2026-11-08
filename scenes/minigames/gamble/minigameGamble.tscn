@@ -52,6 +52,7 @@ position = Vector2(934, -217)
 offset = Vector2(-355, 794)
 
 [node name="gameover" parent="." unique_id=1827543178 instance=ExtResource("7_gv3s4")]
+visible = false
 position = Vector2(576, 327)
 
 [connection signal="minigame_completed" from="AnimatedSprite2D" to="timer" method="_on_animated_sprite_2d_minigame_completed"]
