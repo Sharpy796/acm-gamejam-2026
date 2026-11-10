@@ -87,6 +87,8 @@ script = ExtResource("2_bvvuo")
 [node name="Clothing" type="AnimatedSprite2D" parent="AnimatedSprite2D" unique_id=947565475]
 visible = false
 sprite_frames = SubResource("SpriteFrames_lfxu0")
+frame = 2
+frame_progress = 0.813551
 
 [node name="Thought" type="AnimatedSprite2D" parent="AnimatedSprite2D" unique_id=663904796]
 position = Vector2(747.4379, -1013.39703)
