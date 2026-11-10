@@ -46,9 +46,11 @@ scale = Vector2(0.35967302, 0.35967302)
 sprite_frames = SubResource("SpriteFrames_lfxu0")
 autoplay = "default"
 
-[node name="StartButton" parent="." unique_id=232167011 instance=ExtResource("5_jev7x")]
+[node name="Button" parent="." unique_id=232167011 instance=ExtResource("5_jev7x")]
 offset_left = 156.0
 offset_top = 393.0
 offset_right = 402.0
 offset_bottom = 551.0
 script = ExtResource("6_rrh12")
+
+[connection signal="pressed" from="Button" to="Thanks" method="_on_button_pressed"]

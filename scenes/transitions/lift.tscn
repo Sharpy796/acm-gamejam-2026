@@ -2,7 +2,6 @@
 
 [ext_resource type="Texture2D" uid="uid://dw6vqkjqadg0v" path="res://assets/transitionsplashes/lift/lift1.png" id="1_mspnj"]
 [ext_resource type="Texture2D" uid="uid://cudn6lr3erpjq" path="res://assets/transitionsplashes/lift/lift2.png" id="2_irtt8"]
-[ext_resource type="Texture2D" uid="uid://cfmkmp1ayl1o1" path="res://assets/transitionsplashes/lift/lift3.png" id="3_j7hl5"]
 [ext_resource type="Script" uid="uid://bjne8b626pjao" path="res://scenes/transitions/transitionlift.gd" id="4_mspnj"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_lfxu0"]
@@ -13,13 +12,10 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("2_irtt8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_j7hl5")
 }],
 "loop": 2,
 "name": &"default",
-"speed": 3.75
+"speed": 5.0
 }]
 
 [node name="Node2D" type="Node2D" unique_id=130098012]

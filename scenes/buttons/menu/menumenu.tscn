@@ -15,3 +15,5 @@ position = Vector2(122.99963, 80.930084)
 scale = Vector2(0.2370912, 0.23709123)
 texture = ExtResource("1_ck4di")
 script = ExtResource("2_apw2b")
+
+[connection signal="pressed" from="." to="Sprite2D" method="_on_start_button_pressed"]
