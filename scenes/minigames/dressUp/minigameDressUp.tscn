@@ -91,6 +91,7 @@ sprite_frames = SubResource("SpriteFrames_lfxu0")
 [node name="Thought" type="AnimatedSprite2D" parent="AnimatedSprite2D" unique_id=663904796]
 position = Vector2(747.4379, -1013.39703)
 sprite_frames = SubResource("SpriteFrames_hjb8m")
+frame_progress = 0.23312537
 
 [node name="Area2DMatt" type="Area2D" parent="AnimatedSprite2D" unique_id=1645694604]
 
@@ -99,6 +100,7 @@ polygon = PackedVector2Array(-103.202515, -1053.5254, -262.3064, -911.6221, -275
 
 [node name="Outfit0" type="Sprite2D" parent="." unique_id=1157564875]
 position = Vector2(827.82404, 220.78767)
+rotation = 0.3353459
 scale = Vector2(0.2942874, 0.2942874)
 texture = ExtResource("10_t86n1")
 script = ExtResource("5_068jf")
@@ -111,6 +113,7 @@ polygon = PackedVector2Array(316.53125, 22.6745, 374.29785, -1.1117554, 455.8508
 
 [node name="Outfit1" type="Sprite2D" parent="." unique_id=568203326]
 position = Vector2(677.82416, 305.7877)
+rotation = -0.15448974
 scale = Vector2(0.40943134, 0.40943134)
 texture = ExtResource("12_g36te")
 script = ExtResource("6_yh0pg")
@@ -123,6 +126,7 @@ polygon = PackedVector2Array(139.01831, 87.756775, 68.188354, 97.52643, 4.685669
 
 [node name="Outfit2" type="Sprite2D" parent="." unique_id=303766211]
 position = Vector2(805, 442)
+rotation = 0.13543756
 scale = Vector2(0.47158906, 0.47158906)
 texture = ExtResource("14_e26u1")
 script = ExtResource("7_iltkt")
