@@ -3,10 +3,24 @@
 [ext_resource type="Texture2D" uid="uid://brwgch8caxe8n" path="res://assets/plainCharacterSprites/DragonRamona.png" id="1_7s65u"]
 [ext_resource type="Texture2D" uid="uid://dxj5y4ecq4kq7" path="res://assets/plainCharacterSprites/SkeletonScott.png" id="2_jev7x"]
 [ext_resource type="Texture2D" uid="uid://dieej7h2jk546" path="res://assets/plainCharacterSprites/MimicMatthew.png" id="3_rrh12"]
-[ext_resource type="Texture2D" uid="uid://dbee274pnfedr" path="res://assets/title/thanks.png" id="4_x84le"]
 [ext_resource type="PackedScene" uid="uid://btf84qwd8dxms" path="res://scenes/buttons/menu/menumenu.tscn" id="5_jev7x"]
-[ext_resource type="Script" uid="uid://c4nabl72ad7to" path="res://scenes/buttons/back_to_menu.gd" id="5_x84le"]
+[ext_resource type="Texture2D" uid="uid://b1lsv1qmr76rq" path="res://assets/title/thanks1.png" id="6_0tqbr"]
 [ext_resource type="Script" uid="uid://citsyt7r5c4gd" path="res://scenes/buttons/menu/menumenu.gd" id="6_rrh12"]
+[ext_resource type="Texture2D" uid="uid://8xpm73q6mqsc" path="res://assets/title/thanks2.png" id="7_2c75u"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lfxu0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_0tqbr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_2c75u")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Node2D" type="Node2D" unique_id=1214104283]
 
@@ -26,11 +40,11 @@ position = Vector2(991, 401.00003)
 scale = Vector2(0.22831444, 0.22831446)
 texture = ExtResource("3_rrh12")
 
-[node name="Thanks" type="Sprite2D" parent="." unique_id=1311826274]
-position = Vector2(271, 189)
-scale = Vector2(0.3581267, 0.35812673)
-texture = ExtResource("4_x84le")
-script = ExtResource("5_x84le")
+[node name="Thanks" type="AnimatedSprite2D" parent="." unique_id=91990144]
+position = Vector2(270, 187)
+scale = Vector2(0.35967302, 0.35967302)
+sprite_frames = SubResource("SpriteFrames_lfxu0")
+autoplay = "default"
 
 [node name="StartButton" parent="." unique_id=232167011 instance=ExtResource("5_jev7x")]
 offset_left = 156.0
@@ -38,5 +52,3 @@ offset_top = 393.0
 offset_right = 402.0
 offset_bottom = 551.0
 script = ExtResource("6_rrh12")
-
-[connection signal="pressed" from="StartButton" to="Thanks" method="_on_start_button_pressed"]
