@@ -1,17 +1,17 @@
 [gd_scene format=3 uid="uid://nknsi1ebmwqh"]
 
+[ext_resource type="Texture2D" uid="uid://kgkn1o2wrb5f" path="res://assets/transitionsplashes/brewcoffee/brewcoffee1.png" id="1_ew5k0"]
 [ext_resource type="Texture2D" uid="uid://do67e4v2154de" path="res://assets/transitionsplashes/brewcoffee/brewcoffee2.png" id="2_gcn4q"]
 [ext_resource type="Script" uid="uid://hqr4akevdpm" path="res://scenes/transitions/transitioncoffee.gd" id="3_ew5k0"]
-[ext_resource type="Texture2D" uid="uid://c2shoia0ocaj3" path="res://assets/transitionsplashes/brewcoffee/brewcoffee3.png" id="3_kr4bh"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_lfxu0"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_gcn4q")
+"texture": ExtResource("1_ew5k0")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_kr4bh")
+"texture": ExtResource("2_gcn4q")
 }],
 "loop": 1,
 "name": &"default",
