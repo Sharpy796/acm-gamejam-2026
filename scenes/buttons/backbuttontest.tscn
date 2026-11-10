@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://c5wo86tiuhimx"]
+
+[ext_resource type="Texture2D" uid="uid://c26bchpbbj4v4" path="res://assets/levelselect/back.png" id="1_t7hly"]
+
+[node name="Sprite2D" type="Sprite2D" unique_id=1761184638]
+position = Vector2(2.3841858e-07, 9.094947e-13)
+scale = Vector2(0.39880955, 0.39880955)
+texture = ExtResource("1_t7hly")
+
+[node name="Button" type="Button" parent="." unique_id=1181971333]
+modulate = Color(1, 1, 1, 0)
+top_level = true
+offset_left = 3.0517578e-05
+offset_top = 3.0517578e-05
+offset_right = 134.0
+offset_bottom = 134.0
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1471894868]
+scale = Vector2(0.9999999, 0.9999999)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=1928430005]
+polygon = PackedVector2Array(-157.97012, -152.9552, -167.99997, -135.40295, -165.49251, -112.8358, -162.98505, -32.597, -160.47758, 2.5074615, -165.49251, 42.62686, -162.98505, 112.835815, -157.97012, 140.41788, -145.43282, 152.9552, -130.38803, 157.97012, -87.76118, 160.4776, -70.20894, 165.49252, 100.29849, 165.49252, 112.835815, 157.97012, 135.40295, 157.97012, 150.44772, 147.94028, 160.4776, 130.38803, 162.98505, 80.2388, 165.49252, 37.61194, 162.98505, 2.5074615, 167.99997, -25.074615, 167.99997, -70.20894, 160.4776, -92.7761, 162.98505, -105.313416, 160.4776, -137.91043, 147.94028, -155.46266, 132.89551, -162.98505, -117.85072, -162.98505, -147.94028, -157.97012)
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

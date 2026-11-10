@@ -10,7 +10,4 @@ position = Vector2(576, 324)
 texture = ExtResource("1_2ckv8")
 
 [node name="ButtonBack" parent="." unique_id=1924945515 instance=ExtResource("5_c6kru")]
-offset_left = 984.0
-offset_top = 486.0
-offset_right = 1118.0
-offset_bottom = 620.0
+position = Vector2(1055, 549)

@@ -5,13 +5,33 @@
 
 [sub_resource type="GDScript" id="GDScript_t7v6v"]
 
-[node name="StartButton" type="Button" unique_id=232167011]
+[sub_resource type="SpriteFrames" id="SpriteFrames_lfxu0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ck4di")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Button" type="Button" unique_id=232167011]
 offset_right = 144.0
-offset_bottom = 95.0
+offset_bottom = 92.0
 script = SubResource("GDScript_t7v6v")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1787507612]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=469051888]
+position = Vector2(72, 46.000004)
+scale = Vector2(0.13868064, 0.13868067)
+sprite_frames = SubResource("SpriteFrames_lfxu0")
+script = ExtResource("2_apw2b")
+
+[node name="Area2D" type="Area2D" parent="AnimatedSprite2D" unique_id=933289876]
 position = Vector2(122.99963, 80.930084)
 scale = Vector2(0.2370912, 0.23709123)
-texture = ExtResource("1_ck4di")
-script = ExtResource("2_apw2b")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="AnimatedSprite2D/Area2D" unique_id=2088974470]
+position = Vector2(8726.968, 5558.902)
+scale = Vector2(4.222996, 4.2229953)
+polygon = PackedVector2Array(-2688.5164, -1709.8333, -2710.2004, -1536.3606, -2710.2004, -1167.7314, -2666.8323, -1095.4512, -2529.5007, -1073.7671, -2442.7644, -1059.311, -2298.2039, -1073.7671, -2074.1353, -1073.7671, -1864.5226, -1073.7671, -1712.734, -1117.1353, -1669.3658, -1218.3275, -1669.3658, -1326.7479, -1683.8219, -1362.8881, -1691.0499, -1514.6765, -1705.506, -1666.4651, -1727.1901, -1688.1492, -1763.3302, -1702.6052, -1821.1544, -1717.0613, -2059.6792, -1709.8333, -2103.0474, -1717.0613, -2160.8716, -1717.0613, -2225.9236, -1709.8333, -2283.7478, -1709.8333, -2334.344, -1717.0613, -2413.8523, -1724.2893, -2515.0447, -1731.5173, -2623.4646, -1731.5173)
